@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Navigation Bar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      gap: 40px;
+      justify-content: space-around;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .section1 a {
+      color: navy;
+    }
+
+    .section2 a {
+      color: darkgreen;
+    }
+
+    .section3 a {
+      color: maroon;
+    }
+
+    .section1 > a {
+      font-weight: bold;
+    }
+
+    .section2 > a {
+      text-decoration: underline;
+    }
+
+    .section3 > a {
+      font-style: italic;
+    }
+
+    nav a:hover {
+      background-color: lightgray;
+    }
+
+    nav a:active {
+      color: red;
+    }
+
+    section a[href^="https"] {
+      color: orange !important;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <section class="section1">
+      <a href="https://external.com">External 1</a>
+      <a href="#internal1">Internal 1</a>
+      <div>
+        <a href="#nested1">Nested Link 1</a>
+      </div>
+    </section>
+
+    <section class="section2">
+      <a href="#internal2">Internal 2</a>
+      <a href="https://another.com">External 2</a>
+      <div>
+        <a href="#nested2">Nested Link 2</a>
+      </div>
+    </section>
+
+    <section class="section3">
+      <a href="#internal3">Internal 3</a>
+      <a href="#more">More Links</a>
+      <div>
+        <a href="https://nested.com">Nested External</a>
+      </div>
+    </section>
+  </nav>
+
+</body>
+</html>
